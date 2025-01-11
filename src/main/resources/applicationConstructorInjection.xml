@@ -8,12 +8,12 @@
 
     <!-- By providing the below bean definition, we tell Spring that we have a class at com.example.bean.MyBean which
     I need spring to manage. And "myBean" is the identifier of this class -->
-    <bean id="carSpecification" class="com.constructur.injection.Specification">
+    <bean id="carSpecification" class="com.car.constructur.injection.Specification">
         <property name="make" value="Mercedes"/>
         <property name="model" value="Benz"/>
     </bean>
 
-    <bean id="mercedesCar" class="com.constructur.injection.Car">
+    <bean id="mercedesCar" class="com.car.constructur.injection.Car">
         <!-- constructor-arg does the constructor injection when a bean is created -->
         <constructor-arg ref="carSpecification"/>
     </bean>

@@ -1,4 +1,4 @@
-package com.constructur.injection;
+package com.car.constructur.injection;
 
 public class Specification {
 	private String make;
