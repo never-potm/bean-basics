@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <!-- By providing the below bean definition, we tell Spring that we have a class at com.example.bean.MyBean which
+    I need spring to manage. And "myBean" is the identifier of this class -->
+    <bean id="carSpecification" class="com.car.setter.injection.Specification">
+        <property name="make" value="Mercedes"/>
+        <property name="model" value="Benz"/>
+    </bean>
+
+    <bean id="mercedesCar" class="com.car.setter.injection.Car">
+        <property name="specification" ref="carSpecification"/>
+    </bean>
+
+</beans>
